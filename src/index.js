@@ -56,6 +56,6 @@ app.use(require('./routes/users'));
 app.use(express.static(path.join(__dirname,'public')));
 
 //Server is listenning
-server.listen(app.get('port'), () => {
+app.listen(app.get('port'), () => {
   console.log('Server on port', app.get('port'));
 });
