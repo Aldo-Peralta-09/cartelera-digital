@@ -1,0 +1,338 @@
+<section class="wow fadeIn">
+  <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(/img/culture.jpg);">
+					<span class="login100-form-title-1">
+						Registrar Evento
+					</span>
+				</div>
+
+				<form class="login100-form validate-form" action="/events/edit-event/{{evento._id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Titulo es requerido">
+						<span class="label-input100">Titulo del Evento</span>
+						<input class="input100" type="text" name="title" value="{{evento.title}}">
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Descripcion es requerido">
+						<span class="label-input100">Descripcion</span>
+						<input type="text" name="description" class="input100" value="{{evento.description}}"></textarea>
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Disciplina es requerido">
+						<span class="label-input100">Disciplina</span>
+						<select class="input100" name="discipline">
+              <option value="" selected disabled>Seleccione una disciplina</option>
+              <option value="Artes Visuales">Artes Visuales</option>
+              <option value="Danza">Danza</option>
+              <option value="Musica">Música</option>
+              <option value="Literatura">Literatura</option>
+              <option value="Cine">Cine</option>
+              <option value="Teatro">Teatro</option>
+              <option value="Gastronomia">Gastronomía</option>
+              <option value="Patrimonio">Patrimonio</option>
+              <option value="Multidisciplinario">Multidisciplinario</option>
+              <option value="Otro">Otro</option>
+            </select>
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Categoria es requerido">
+						<span class="label-input100">Categoria</span>
+						<select class="input100" name="category">
+              <option value="" selected disabled>Seleccione una categoria</option>
+              <option value="Actividad Recreativa">Actividad Recreativa</option>
+              <option value="Cafe Literario">Café Literario</option>
+              <option value="Circulo de Lectura">Circulo de Lectura</option>
+              <option value="Concierto">Concierto</option>
+              <option value="Conferencia">Conferencia</option>
+              <option value="Conferencia Magistral">Conferencia Magistral</option>
+              <option value="Curso">Curso</option>
+              <option value="Diplomado">Diplomado</option>
+              <option value="Exhibición">Exhibición</option>
+              <option value="Exposición">Exposición</option>
+              <option value="Feria">Feria</option>
+              <option value="Festival">Festival</option>
+              <option value="Foro">Foro</option>
+              <option value="Funcion">Función</option>
+              <option value="Masterclass">Masterclass</option>
+              <option value="Mesa de Discusion">Mesa de Discusión</option>
+              <option value="Muestra">Muestra</option>
+              <option value="Premiación">Premiación</option>
+              <option value="Presentacion">Presentación</option>
+              <option value="Proyeccion">Proyección</option>
+              <option value="Simposio">Simposio</option>
+              <option value="Taller">Taller</option>
+            </select>
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Tipo de Evento es requerido">
+						<span class="label-input100">Tipo de Evento</span>
+						<select class="input100" name="type">
+              <option value="" selected disabled>Seleccione un tipo</option>
+              <option value="Eventos">Eventos</option>
+              <option value="Exposiciones Temporales">Exposiciones Temporales</option>
+              <option value="Actividades Permanentes">Actividades Permanentes</option>
+              <option value="Convocatoria">Convocatoria</option>
+            </select>
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="flex-sb-m w-full p-b-30 validate-input" data-validate="Jerarquia es requerido">
+            <span class="label-checkbox100">Jerarquia</span>
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="radio" value="Evento" name="hierarchy" required="">
+							<label class="label-checkbox100" for="ckb1">
+								Evento
+							</label>
+							<br>
+							<input class="input-checkbox100" id="ckb2" type="radio" value="Sub-Evento" name="hierarchy" required="">
+							<label class="label-checkbox100" for="ckb2">
+								Sub-Evento
+							</label>
+						</div>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Titulo es requerido">
+						<span class="label-input100">¿A que evento pertenece?</span>
+						<input class="input100" type="text" name="event" value="{{evento.event}}">
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Fecha de Inicio es requerido">
+						<span class="label-input100">Fecha de Inicio</span>
+						<input class="input100" type="datetime-local" name="start" value="{{evento.start}}">
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Fecha de Termino es requerido">
+						<span class="label-input100">Fecha de Termino</span>
+						<input class="input100" type="datetime-local" name="finish" value="{{evento.finish}}">
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="field_wrapper">
+
+          </div>
+
+          <div class="container-login100-form-btn">
+						<a href="javascript:void(0);" class="add_button login100-form-btn" title="Agregar Horario">Agregar Horario</a>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Municipio es requerido">
+						<span class="label-input100">Municipio</span>
+						<select class="input100" name="municipality">
+              <option value="" selected disabled>Seleccione una municipio</option>
+              <option value="Acatlan">Acatlán</option>
+              <option value="Acaxochitlan">Acaxochitlán</option>
+              <option value="Agua Blanca de Iturbide">Agua Blanca de Iturbide</option>
+              <option value="Ajacuba">Ajacuba</option>
+              <option value="Alfajayucan">Alfajayucan</option>
+              <option value="Almoloya">Almoloya</option>
+              <option value="Apan">Apan</option>
+              <option value="El Arenal">El Arenal</option>
+              <option value="Atitalaquia">Atitalaquia</option>
+              <option value="Atlapexco">Atlapexco</option>
+              <option value="Atotonilco el Grande">Atotonilco el Grande</option>
+              <option value="Atotonilco de Tula">Atotonilco de Tula</option>
+              <option value="Calnali">Calnali</option>
+              <option value="Cardonal">Cardonal</option>
+              <option value="Cuautepec de Hinojosa">Cuautepec de Hinojosa</option>
+              <option value="Chapantongo">Chapantongo</option>
+              <option value="Chapulhuacan">Chapulhuacán</option>
+              <option value="Chilcuautla">Chilcuautla</option>
+              <option value="Eloxochitlan">Eloxochitlán</option>
+              <option value="Emiliano Zapata">Emiliano Zapata</option>
+              <option value="Epazoyucan">Epazoyucan</option>
+              <option value="Francisco I. Madero">Francisco I. Madero</option>
+              <option value="Huasca de Ocampo">Huasca de Ocampo</option>
+              <option value="Huautla">Huautla</option>
+              <option value="Huazalingo">Huazalingo</option>
+              <option value="Huehuetla">Huehuetla</option>
+              <option value="Huejutla de Reyes">Huejutla de Reyes</option>
+              <option value="Huichapan">Huichapan</option>
+              <option value="Ixmiquilpan">Ixmiquilpan</option>
+              <option value="Jacala de Ledezma">Jacala de Ledezma</option>
+              <option value="Jaltocan">Jaltocán</option>
+              <option value="Juarez Hidalgo">Juárez Hidalgo</option>
+              <option value="Lolotla">Lolotla</option>
+              <option value="Metepec">Metepec</option>
+              <option value="San Agustin Metzquititlan">San Agustin Metzquititlán</option>
+              <option value="Metztitlan">Metztitlán</option>
+              <option value="Mineral del Chico">Mineral del Chico</option>
+              <option value="Mineral del Monte">Mineral del Monte</option>
+              <option value="La Mision">La Misión</option>
+              <option value="Mixquiahuala de Juarexz">Mixquiahuala de Juárez</option>
+              <option value="Molango de Escamilla">Molango de Escamilla</option>
+              <option value="Nicolas Flores">Nicolás Flores</option>
+              <option value="Nopala de Villagran">Nopala de Villagrán</option>
+              <option value="Omitlan de Juarez">Omitlán de Juárez</option>
+              <option value="San Felipe Orizatlan">San Felipe Orizatlán</option>
+              <option value="Pacula">Pacula</option>
+              <option value="Pachuca de Soto">Pachuca de Soto</option>
+              <option value="Pisaflores">Pisaflores</option>
+              <option value="Progreso de Obregon">Progreso de Obregón</option>
+              <option value="Mineral de la Reforma">Mineral de la Reforma</option>
+              <option value="San Agustin Tlaxiaca">San Agustin Tlaxiaca</option>
+              <option value="San Bartolo Tutotepec">San Bartolo Tutotepec</option>
+              <option value="San Salvador">San Salvador</option>
+              <option value="Santiago de Anaya">Santiago de Anaya</option>
+              <option value="Santiago Tulantepec de Lugo Guerrero">Santiago Tulantepec de Lugo Guerrero</option>
+              <option value="Singuilucan">Singuilucan</option>
+              <option value="Tasquillo">Tasquillo</option>
+              <option value="Tecozautla">Tecozautla</option>
+              <option value="Tenango de Doria">Tenango de Doria</option>
+              <option value="Tepeapulco">Tepeapulco</option>
+              <option value="Tepehuacan de Guerrero">Tepehuacán de Guerrero</option>
+              <option value="Tepeji de Rio de Ocampo">Tepeji del Río de Ocampo</option>
+              <option value="Tepetitlan">Tepetitlán</option>
+              <option value="Tetepango">Tetepango</option>
+              <option value="Villa de Tezontepec">Villa de Tezontepec</option>
+              <option value="Tezontepec de Aldama">Tezontepec de Aldama</option>
+              <option value="Tianguistengo">Tianguistengo</option>
+              <option value="Tizayuca">Tizayuca</option>
+              <option value="Tlahuelilpan">Tlahuelilpan</option>
+              <option value="Tlahuiltepa">Tlahuiltepa</option>
+              <option value="Tlanalapa">Tlanalapa</option>
+              <option value="Tlanchinol">Tlanchinol</option>
+              <option value="Tlaxcoapan">Tlaxcoapan</option>
+              <option value="Tolcayuca">Tolcayuca</option>
+              <option value="Tula de Allende">Tula de Allende</option>
+              <option value="Tulancingo de Bravo">Tulancingo de Bravo</option>
+              <option value="Xochiatipan">Xochiatipan</option>
+              <option value="Xochicoatlan">Xochicoatlán</option>
+              <option value="Yahualica">Yahualica</option>
+              <option value="Zacualtipan de Angeles">Zacualtipán de Ángeles</option>
+              <option value="Zapotlan de Juarez">Zapotlán de Juárez</option>
+              <option value="Zempoala">Zempoala</option>
+              <option value="Zimapan">Zimapán</option>
+            </select>
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Lugar es requerido">
+						<span class="label-input100">Lugar</span>
+						<input class="input100" type="text" name="place" value="{{evento.place}}">
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Tipo de Evento es requerido">
+						<span class="label-input100">Organiza</span>
+						<select class="input100" name="organizer">
+              <option value="" selected disabled>Seleccione una organizador</option>
+              <option value="Secretaria de Cultura">Secretaria de Cultura</option>
+              <option value="Organismo Independiente">Organismo Independiente</option>
+            </select>
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 m-b-26" data-validate="Imparte es requerido">
+						<span class="label-input100">Imparte</span>
+						<input class="input100" type="text" name="speaker" value="{{evento.speaker}}">
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 m-b-26" data-validate="URL es requerido">
+						<span class="label-input100">URL del evento</span>
+						<input class="input100" type="text" name="url" value="{{evento.url}}">
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Tipo de Evento es requerido">
+						<span class="label-input100">Entrada</span>
+						<select class="input100" name="entry">
+              <option value="" selected disabled>Seleccione una entrada</option>
+              <option value="Gratuito">Gratuito</option>
+              <option value="Boleto de Cortesia">Boleto de Cortesia</option>
+              <option value="Cuota de Recuperacion">Cuota de Recuperación</option>
+              <option value="Inscripcion">Inscripción</option>
+              <option value="Bono">Bono</option>
+            </select>
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 m-b-26" data-validate="URL es requerido">
+						<span class="label-input100">Precio</span>
+						<input class="input100" type="number" name="price" value="{{evento.price}}">
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="flex-sb-m w-full p-b-30" data-validate="Jerarquia es requerido">
+            <span class="label-checkbox100">Descuentos</span>
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb10" type="checkbox" value="INAPAM" name="discount">
+							<label class="label-checkbox100" for="ckb10">
+								INAPAM
+							</label>
+							<br>
+							<input class="input-checkbox100" id="ckb20" type="checkbox" value="Estudiantes" name="discount">
+							<label class="label-checkbox100" for="ckb20">
+								Estudiantes
+							</label>
+						</div>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Publico es requerido">
+						<span class="label-input100">Público</span>
+						<select class="input100" name="public">
+              <option value="" selected disabled>Seleccione un público</option>
+              <option value="General">General</option>
+              <option value="Niños">Niños</option>
+              <option value="Adolescentes">Adolescentes</option>
+              <option value="Jovenes">Jóvenes</option>
+              <option value="Adultos">Adultos</option>
+            </select>
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Publico es requerido">
+						<span class="label-input100">Público Especifico</span>
+						<select class="input100" name="especificPublic">
+              <option value="" selected disabled>Seleccione un público especifico</option>
+              <option value="Estudiantes Primaria">Estudiantes Primaria</option>
+              <option value="Estudiantes Secundaria">Estudiantes Secundaria</option>
+              <option value="Estudiantes Bachillerato">Estudiantes Bachillerato</option>
+              <option value="Discapacidad Visual">Discapacidad Visual</option>
+              <option value="Discapacidad Auditiva">Discapacidad Auditiva</option>
+              <option value="Discapacidad Motriz">Discapacidad Motriz</option>
+            </select>
+						<span class="focus-input100"></span>
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Genero es requerido">
+						<span class="label-input100">Genero</span>
+						<select class="input100" name="gender">
+              <option value="" selected disabled>Seleccione un genero</option>
+              <option value="General">General</option>
+              <option value="Hombres">Hombres</option>
+              <option value="Mujeres">Mujeres</option>
+            </select>
+						<span class="focus-input100"></span>
+					</div>
+
+          <!--<div class="wrap-input100 validate-input m-b-26" data-validate="INE es requerido">
+						<span class="label-input100">Encabezado</span>
+						<input type="hidden" name="MAX_FILE_SIZE" value="3000000">
+						<input class="input100" type="file" name="banner" required>
+						<span class="focus-input100"></span>
+					</div>-->
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Imagen es requerido">
+						<span class="label-input100">Imagen Destacada</span>
+						<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+						<input class="input100" type="file" name="image" value="{{evento.image}}" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<input class="login100-form-btn" type="submit"></input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

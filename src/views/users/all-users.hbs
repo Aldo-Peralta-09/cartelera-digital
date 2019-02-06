@@ -1,0 +1,46 @@
+<section id="blog" class="padd-section wow fadeInUp">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Usuarios Vigentes</h2>
+      <p class="separator">Concentrado de usuarios</p>
+      <a href="/users/signup" class="btn btn-success scrollto">Agregar Usuario</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      {{#each users}}
+        <div class="col-md-6 col-lg-4">
+            <div class="block-blog text-left">
+              <a href="#"><img src="/img/user.png" alt="img"></a>
+              <div class="content-blog">
+                <h4 class="d-flex justify-content-between align-items-center">
+                  {{name}} <a href="/users/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                </h4>
+                <span>{{email}}</span>
+                <br>
+                <span>{{dependency}}</span>
+                <form class="" action="/users/delete/{{_id}}?_method=DELETE" method="post">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button class="pull-right readmore" type="submit">Delete</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      {{else}}
+        <div class="container">
+          <div class="row">
+            <div class=" col-sm-12 col-md-4 col-lg-6 mx-auto">
+              <div class="card">
+                <div class="card-body">
+                  <h1>Hola</h1>
+                  <p class="lead">No hay usuarios aun</p>
+                  <a href="/users/signup" class="btn btn-success btn-block">Crea uno</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

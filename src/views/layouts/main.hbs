@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cartelera Digital</title>
+
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+    <link href="/lib/css-hamburgers/hamburgers.min.css" rel="stylesheet">
+	  <link href="/lib/animsition/css/animsition.min.css" rel="stylesheet">
+	  <link href="/lib/select2/select2.min.css" rel="stylesheet">
+	  <link href="/lib/daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous">
+    <!-- Main Stylesheet File -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/util.css" rel="stylesheet">
+	  <link href="/css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    {{>navigation}}
+    {{{body}}}
+    {{>messages}}
+    {{>errors}}
+
+    {{>footer}}
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous">
+    </script>
+    <script src="/lib/superfish/hoverIntent.js"></script>
+    <script src="/lib/superfish/superfish.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/modal-video/js/modal-video.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/animsition/js/animsition.min.js"></script>
+    <script src="/lib/select2/select2.min.js"></script>
+    <script src="/lib/daterangepicker/moment.min.js"></script>
+	  <script src="/lib/daterangepicker/daterangepicker.js"></script>
+    <script src="../lib/countdowntime/countdowntime.js"></script>
+    <!-- Template Main Javascript File -->
+    <script src="/js/main.js"></script>
+    <script src="/js/main2.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var maxField = 10; //Input fields increment limitation
+        var addButton = $('.add_button'); //Add button selector
+        var wrapper = $('.field_wrapper'); //Input field wrapper
+        var fieldHTML = '<div class="wrap-input100 validate-input m-b-26" data-validate="Horario es requerido"><a href="javascript:void(0);" title="Remove field" class="fas fa-times remove_button"></i></a><span class="label-input100">Horario</span><input class="input100" type="time" name="dates[]"><span class="focus-input100"></span></div>'; //New input field html
+        var x = 1; //Initial field counter is 1
+        $(addButton).click(function(){ //Once add button is clicked
+            if(x < maxField){ //Check maximum number of input fields
+                x++; //Increment field counter
+                $(wrapper).append(fieldHTML); // Add field html
+            }
+        });
+        $(wrapper).on('click', '.remove_button', function(e){ //Once remove button is clicked
+            e.preventDefault();
+            $(this).parent('div').remove(); //Remove field html
+            x--; //Decrement field counter
+        });
+    });
+    </script>
+  </body>
+</html>

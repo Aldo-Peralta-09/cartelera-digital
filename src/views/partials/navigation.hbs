@@ -1,0 +1,44 @@
+<header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="/" class="scrollto">Cartelera<span>Digital</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!--<a href="#body"><img src="/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="/">Home</a></li>
+          <li><a href="/about">Acerca De</a></li>
+          {{#if user}}
+            <li><a href="/events">Eventos</a></li>
+            <li><a href="/events/add">Agregar Evento</a></li>
+            <!--<li><a href="/users/signup">Agregar Usuarios</a></li>-->
+            <li><a href="/users/logout">Cerrar Sesión</a></li>
+          {{else}}
+            <li><a href="/users/signin">Iniciar Sesion</a></li>
+          {{/if}}
+            <!--<li class="menu-has-children"><a href="">Eventos</a>
+              <ul>
+                <li><a href="/events">Ver Eventos</a></li>
+                <li><a href="/events/add">Agregar Eventos</a></li>
+                <div class="dropdown-divider"></div>
+                <li><a href="/users/logout">Cerrar Sesión</a></li>
+              </ul>
+            </li>
+            <li class="menu-has-children"><a href="">Usuarios</a>
+              <ul>
+                <li><a href="#">Ver Usuarios</a></li>
+                <li><a href="/users/signup">Agregar Usuarios</a></li>
+                <div class="dropdown-divider"></div>
+                <li><a href="/users/logout">Cerrar Sesión</a></li>
+              </ul>
+            </li>-->
+
+
+
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
