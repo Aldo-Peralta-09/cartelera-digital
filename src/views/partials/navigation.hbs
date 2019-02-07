@@ -1,12 +1,8 @@
-<header id="header" class="header header-hide">
+<!--<header id="header" class="header header-hide">
     <div class="container">
-
       <div id="logo" class="pull-left">
         <h1><a href="/" class="scrollto">Cartelera<span>Digital</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!--<a href="#body"><img src="/img/logo.png" alt="" title="" /></a>-->
       </div>
-
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="/">Home</a></li>
@@ -14,31 +10,80 @@
           {{#if user}}
             <li><a href="/events">Eventos</a></li>
             <li><a href="/events/add">Agregar Evento</a></li>
-            <!--<li><a href="/users/signup">Agregar Usuarios</a></li>-->
             <li><a href="/users/logout">Cerrar Sesión</a></li>
           {{else}}
             <li><a href="/users/signin">Iniciar Sesion</a></li>
           {{/if}}
-            <!--<li class="menu-has-children"><a href="">Eventos</a>
-              <ul>
-                <li><a href="/events">Ver Eventos</a></li>
-                <li><a href="/events/add">Agregar Eventos</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a href="/users/logout">Cerrar Sesión</a></li>
-              </ul>
-            </li>
-            <li class="menu-has-children"><a href="">Usuarios</a>
-              <ul>
-                <li><a href="#">Ver Usuarios</a></li>
-                <li><a href="/users/signup">Agregar Usuarios</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a href="/users/logout">Cerrar Sesión</a></li>
-              </ul>
-            </li>-->
-
-
-
         </ul>
-      </nav><!-- #nav-menu-container -->
+      </nav>
     </div>
-  </header><!-- #header -->
+</header>-->
+
+<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top navbar" >
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-target="#navbarMainCollapse" data-toggle="collapse">
+						<span class="sr-only">Interruptor de Navegación</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="http://www.hidalgo.gob.mx/" class="navbar-brand" title="Ir a la página inicial"><img alt="gob.mx" src="http://cdn.hidalgo.gob.mx/logo_gobhidalgo.svg" /></a>
+				</div>
+				<div id="navbarMainCollapse" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="http://ruts.hidalgo.gob.mx/" class="" title="Trámites">Trámites y Servicios</a></li>
+						<li><a href="http://gobierno.hidalgo.gob.mx/" class="" title="Gobierno">Gobierno</a></li>
+						<li><a href="http://estado.hidalgo.gob.mx/" title="Participación Ciudadana">Estado</a></li>
+						<li><a href="http://www.hidalgo.gob.mx/#buzon" title="Datos abiertos">Buzón Ciudadano</a></li>
+						<!--li>
+							<form accept-charset="UTF-8" action="/busqueda" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+							  <button id="goSearch" type="submit" class="btn" title="buscar" value="buscar" style="background-color: #092432" onmouseleave="this,style.background='#092432'" onmouseover="this.style.background='black'" onfocus="this.style.background='black'" >
+								<img alt="Búsqueda" width="20" height="20" class="optical-adjust-search" src="https://framework-gb.cdn.gob.mx/assets/search.svg" />
+							  </button>
+							</form>
+						  </li-->
+					</ul>
+				</div>
+		</div>
+	</nav>
+
+	<!-- VEDA ELECTORAL-->
+	<!-- div class="warning-nav">
+	    <p>Este contenido será modificado temporalmente en atención a las disposiciones legales y normativas en materia electoral, con motivo del inicio de periodo de campaña</p>
+	 </div -->
+   <nav class="navbar navbar-inverse navbar-fixed-top navbar zorambar">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="logo"><div class="logosecretaria"></div></a>
+          <button type="button" class="navbar-toggle collapsed" data-target="#navbarMainCollapse2" data-toggle="collapse">
+            <span class="sr-only">Interruptor de Navegación</span>
+		<i class="fas fa-caret-down"></i>
+          </button>
+          <a href="/" class="navbar-brand nombresecretaria"><strong>Cartelera Digital</strong></a>
+      	</div>
+      	<div id="navbarMainCollapse2" class="collapse navbar-collapse">
+        	<ul class="nav navbar-nav navbar-right">
+              {{#if user}}
+                <li><a href="/events" class="" title="Eventos">Eventos</a></li>
+            		<li><a href="/events/add" class="" title="Agregar Evento">Agregar Evento</a></li>
+            		<li><a href="/users/logout" title="Cerrar Sesión">Cerrar Sesión</a></li>
+              {{else}}
+                <li><a href="/users/signin" class="" title="Iniciar Sesion">Iniciar Sesion</a></li>
+              {{/if}}
+
+          <!--<li><a href="http://datos.gob.mx" title="Datos abiertos">Galeria</a></li>-->
+          <!--<li>
+                  <form accept-charset="UTF-8" action="/busqueda" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+                    <button id="goSearch" type="submit" class="btn" title="buscar" value="buscar" style="background-color: #092432" onmouseleave="this,style.background='#092432'" onmouseover="this.style.background='black'" onfocus="this.style.background='black'" >
+                      <img alt="Búsqueda" width="20" height="20" class="optical-adjust-search" src="https://framework-gb.cdn.gob.mx/assets/search.svg" />
+                    </button>
+                  </form>
+          </li>-->
+        	</ul>
+      	</div>
+    </div>
+  </nav>
+
+</header>

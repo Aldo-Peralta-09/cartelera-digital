@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Cartelera Digital</title>
+    <meta name="description" content="Sitio web donde encontraras eventos culturales alrededor del estado de Hidalgo" />
+		<meta name="keywords" content="hidalgo, cultura, eventos, concierto, musica, cine, patrimonio cultural, convocatoria, educacion artistica" />
 
     <!-- Favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="http://cdn.hidalgo.gob.mx/logo.png">
     <link href="/img/favicon.png" rel="icon">
+
+    <meta name="csrf-param" content="authenticity_token" />
+		<meta name="csrf-token" content="5xMoMUPoxaKcR6F4kMAIHKMhqEy7uq2ElUYOTPTmfvP/KWGMvokFGg7iExRxu1+BRxioDGTS+Pc9n9giF6U3fA==" />
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+    	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <!-- Libraries CSS Files -->
     <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -24,11 +36,12 @@
 	  <link href="/lib/select2/select2.min.css" rel="stylesheet">
 	  <link href="/lib/daterangepicker/daterangepicker.css" rel="stylesheet">
 
-    <link
+    <!--<link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous">
+      crossorigin="anonymous"
+       id="bootstrap-css">-->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -38,8 +51,9 @@
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/util.css" rel="stylesheet">
 	  <link href="/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="/css/application.css" data-turbolinks-track="true" />
   </head>
-  <body>
+  <body data-no-turbolink="true">
     {{>navigation}}
     {{{body}}}
     {{>messages}}
@@ -75,6 +89,7 @@
     <!-- Template Main Javascript File -->
     <script src="/js/main.js"></script>
     <script src="/js/main2.js"></script>
+    <script src="/js/application.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
         var maxField = 10; //Input fields increment limitation
