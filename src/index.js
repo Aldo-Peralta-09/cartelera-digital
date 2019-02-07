@@ -56,6 +56,6 @@ app.use(require('./routes/users'));
 app.use(express.static(path.join(__dirname,'public')));
 
 //Server is listenning asdasd
-app.listen(app.get('port'), () => {
+server.listen(app.get('port'), () => {
   console.log('Server on port', app.get('port'));
 });
