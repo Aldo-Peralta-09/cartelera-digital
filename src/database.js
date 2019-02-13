@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/cartelera-digital',{
+mongoose.connect('mongodb://siec:INNOVACION2019=@ds133875.mlab.com:33875/cartelera-digital',{
   useCreateIndex: true,
   useNewUrlParser: true,
   useFindAndModify: false
