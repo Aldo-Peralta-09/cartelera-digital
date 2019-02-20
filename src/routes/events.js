@@ -61,8 +61,8 @@ router.post('/events/new-event', isAuthenticated, upload, async (req,res) =>{
     newEvent.public = req.body.public;
     newEvent.especificPublic = req.body.especificPublic;
     newEvent.gender = req.body.gender;
-    newEvent.banner = '/img/events/' + req.files['banner'][0];
-    newEvent.image = '/img/events/' + req.files['image'][0];
+    newEvent.banner = '/img/events/' + req.files['banner'];
+    newEvent.image = '/img/events/' + req.files['image'];
     newEvent.user = req.user.id;
     await newEvent.save();
     req.flash('success_msg','Evento agregado satisfactoriamente');
