@@ -25,7 +25,7 @@ const upload = multer({
     }
     cb("Error: Archivo no es valido");
   }
-}).single('image')
+}).fields([{name: 'banner', maxCount: 1},{name: 'image', maxCount: 1}]);
 
 router.get('/events/add', isAuthenticated, (req,res) =>{
   res.render('events/new-event');
@@ -61,7 +61,8 @@ router.post('/events/new-event', isAuthenticated, upload, async (req,res) =>{
     newEvent.public = req.body.public;
     newEvent.especificPublic = req.body.especificPublic;
     newEvent.gender = req.body.gender;
-    newEvent.image = '/img/events/' + req.file.filename;
+    newEvent.banner = '/img/events/' + req.files['banner'][0];
+    newEvent.image = '/img/events/' + req.files['image'][0];
     newEvent.user = req.user.id;
     await newEvent.save();
     req.flash('success_msg','Evento agregado satisfactoriamente');

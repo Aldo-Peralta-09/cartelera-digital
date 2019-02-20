@@ -25,15 +25,15 @@
         </div>
       {{else}}
         <div class="container">
-          <div class="row">
-            <div class=" col-sm-12 col-md-4 col-lg-6 mx-auto">
+          <div class="row justify-content-center">
+            <div class="col-sm-12 col-md 12 col-lg-4 mx-auto">
               <div class="card">
                 <div class="card-body">
-                  <h1>Hola {{user.name}}</h1>
-                  <p class="lead">No hay eventos aun</p>
+                  <h1 class="text-center">Hola {{user.name}}</h1>
+                  <p class="lead text-center">No hay eventos aun</p>
                   <a href="/events/add" class="btn btn-success btn-block">Crea uno</a>
                 </div>
-              </div>
+            </div>
             </div>
           </div>
         </div>

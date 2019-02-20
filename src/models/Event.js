@@ -23,7 +23,7 @@ const EventSchema = new Schema({
   public: {type: String},
   especificPublic: {type: String},
   gender: {type: String},
-  //banner: {type: String},
+  banner: {type: String},
   image: {type: String},
   date: {type: Date, default: Date.now()},
   user: {type: String}
