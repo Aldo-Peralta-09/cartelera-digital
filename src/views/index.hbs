@@ -7,15 +7,9 @@
   </div>
   <div class="container">
     <div class="owl-carousel owl-theme">
-      <div><img src="/img/slider-feria-tamal.jpg" alt="img"></div>
-      <div><img src="/img/padigral.jpg" alt="img"></div>
-      <div><img src="/img/sixtina.jpg" alt="img"></div>
-      <div><img src="/img/slider-feria-tamal.jpg" alt="img"></div>
-      <div><img src="/img/padigral.jpg" alt="img"></div>
-      <div><img src="/img/sixtina.jpg" alt="img"></div>
-      <div><img src="/img/slider-feria-tamal.jpg" alt="img"></div>
-      <div><img src="/img/padigral.jpg" alt="img"></div>
-      <div><img src="/img/sixtina.jpg" alt="img"></div>
+      {{#each events}}
+        <div><img src="{{banner}}" alt="img"></div>
+      {{/each}}
     </div>
   </div>
 </section>
