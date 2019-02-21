@@ -25,7 +25,7 @@
           <div class="wrap-input100 validate-input m-b-26" data-validate="Disciplina es requerido">
 						<span class="label-input100">Disciplina</span>
 						<select class="input100" name="discipline">
-              <option value="" selected disabled>Seleccione una disciplina</option>
+              <option value="{{evento.discipline}}" selected>{{evento.discipline}}</option>
               <option value="Artes Visuales">Artes Visuales</option>
               <option value="Danza">Danza</option>
               <option value="Musica">Música</option>
@@ -43,7 +43,7 @@
           <div class="wrap-input100 validate-input m-b-26" data-validate="Categoria es requerido">
 						<span class="label-input100">Categoria</span>
 						<select class="input100" name="category">
-              <option value="" selected disabled>Seleccione una categoria</option>
+              <option value="{{evento.category}}" selected>S{{evento.category}}</option>
               <option value="Actividad Recreativa">Actividad Recreativa</option>
               <option value="Cafe Literario">Café Literario</option>
               <option value="Circulo de Lectura">Circulo de Lectura</option>
@@ -73,7 +73,7 @@
           <div class="wrap-input100 validate-input m-b-26" data-validate="Tipo de Evento es requerido">
 						<span class="label-input100">Tipo de Evento</span>
 						<select class="input100" name="type">
-              <option value="" selected disabled>Seleccione un tipo</option>
+              <option value="{{evento.type}}" selected>{{evento.type}}</option>
               <option value="Eventos">Eventos</option>
               <option value="Exposiciones Temporales">Exposiciones Temporales</option>
               <option value="Actividades Permanentes">Actividades Permanentes</option>
@@ -126,7 +126,7 @@
           <div class="wrap-input100 validate-input m-b-26" data-validate="Municipio es requerido">
 						<span class="label-input100">Municipio</span>
 						<select class="input100" name="municipality">
-              <option value="" selected disabled>Seleccione una municipio</option>
+              <option value="{{evento.municipality}}" selected>{{evento.municipality}}</option>
               <option value="Acatlan">Acatlán</option>
               <option value="Acaxochitlan">Acaxochitlán</option>
               <option value="Agua Blanca de Iturbide">Agua Blanca de Iturbide</option>
@@ -223,7 +223,7 @@
           <div class="wrap-input100 validate-input m-b-26" data-validate="Tipo de Evento es requerido">
 						<span class="label-input100">Organiza</span>
 						<select class="input100" name="organizer">
-              <option value="" selected disabled>Seleccione una organizador</option>
+              <option value="{{evento.organizaer}}" selected>{{evento.organizaer}}</option>
               <option value="Secretaria de Cultura">Secretaria de Cultura</option>
               <option value="Organismo Independiente">Organismo Independiente</option>
             </select>
@@ -245,7 +245,7 @@
           <div class="wrap-input100 validate-input m-b-26" data-validate="Tipo de Evento es requerido">
 						<span class="label-input100">Entrada</span>
 						<select class="input100" name="entry">
-              <option value="" selected disabled>Seleccione una entrada</option>
+              <option value="{{evento.entry}}" selected>{{evento.entry}}</option>
               <option value="Gratuito">Gratuito</option>
               <option value="Boleto de Cortesia">Boleto de Cortesia</option>
               <option value="Cuota de Recuperacion">Cuota de Recuperación</option>
@@ -279,7 +279,7 @@
           <div class="wrap-input100 validate-input m-b-26" data-validate="Publico es requerido">
 						<span class="label-input100">Público</span>
 						<select class="input100" name="public">
-              <option value="" selected disabled>Seleccione un público</option>
+              <option value="{{evento.public}}" selected>{{evento.public}}</option>
               <option value="General">General</option>
               <option value="Niños">Niños</option>
               <option value="Adolescentes">Adolescentes</option>
@@ -292,7 +292,8 @@
           <div class="wrap-input100 validate-input m-b-26" data-validate="Publico es requerido">
 						<span class="label-input100">Público Especifico</span>
 						<select class="input100" name="especificPublic">
-              <option value="" selected disabled>Seleccione un público especifico</option>
+              <option value="{{evento.especificPublic}}" selected>{{evento.especificPublic}}</option>
+              <option value="General">General</option>
               <option value="Estudiantes Primaria">Estudiantes Primaria</option>
               <option value="Estudiantes Secundaria">Estudiantes Secundaria</option>
               <option value="Estudiantes Bachillerato">Estudiantes Bachillerato</option>
@@ -306,7 +307,7 @@
           <div class="wrap-input100 validate-input m-b-26" data-validate="Genero es requerido">
 						<span class="label-input100">Genero</span>
 						<select class="input100" name="gender">
-              <option value="" selected disabled>Seleccione un genero</option>
+              <option value="{{evento.gender}}" selected>{{evento.gender}}</option>
               <option value="General">General</option>
               <option value="Hombres">Hombres</option>
               <option value="Mujeres">Mujeres</option>
@@ -314,12 +315,12 @@
 						<span class="focus-input100"></span>
 					</div>
 
-          <!--<div class="wrap-input100 validate-input m-b-26" data-validate="INE es requerido">
+          <div class="wrap-input100 validate-input m-b-26" data-validate="INE es requerido">
 						<span class="label-input100">Encabezado</span>
 						<input type="hidden" name="MAX_FILE_SIZE" value="3000000">
-						<input class="input100" type="file" name="banner" required>
+						<input class="input100" type="file" name="banner" value="{{evento.banner}}" required>
 						<span class="focus-input100"></span>
-					</div>-->
+					</div>
 
           <div class="wrap-input100 validate-input m-b-26" data-validate="Imagen es requerido">
 						<span class="label-input100">Imagen Destacada</span>

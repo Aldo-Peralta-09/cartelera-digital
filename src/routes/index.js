@@ -7,8 +7,9 @@ router.get('/', async (req, res) => {
   res.render('index',{events});
 });
 
-router.get('/about', (req, res) => {
-  res.render('about');
+router.get('/detail/:id', async (req, res) => {
+  const evento = await Event.findById(req.params.id);
+  res.render('detail',{evento});
 });
 
 module.exports = router;
