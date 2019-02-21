@@ -420,6 +420,15 @@ body.mobile-nav-active #mobile-nav-toggle i {
   #hero {
     background-attachment: fixed;
   }
+  .top-section {
+    padding-top: 45px;
+  }
+}
+
+@media (max-width: 450px) {
+  .top-section {
+    padding-top: 80px;
+  }
 }
 
 #hero .hero-container {
@@ -447,6 +456,9 @@ body.mobile-nav-active #mobile-nav-toggle i {
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
+  }
+  .top-section {
+    padding-top: 80px;
   }
 }
 
@@ -507,10 +519,9 @@ body.mobile-nav-active #mobile-nav-toggle i {
   #hero .btns a {
     margin: 4px 8px;
   }
-}
-
-.top-section{
-  padding-top: 40px;
+  .top-section {
+    padding-top: 80px;
+  }
 }
 
 .padd-section {
