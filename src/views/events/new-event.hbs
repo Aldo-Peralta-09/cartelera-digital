@@ -102,22 +102,24 @@
 
           <div class="wrap-input100 validate-input m-b-26" data-validate="Fecha de Inicio es requerido">
 						<span class="label-input100">Fecha de Inicio</span>
-						<input class="input100" type="datetime-local" name="start">
+						<input class="input100" type="date" name="start">
 						<span class="focus-input100"></span>
 					</div>
 
           <div class="wrap-input100 validate-input m-b-26" data-validate="Fecha de Termino es requerido">
 						<span class="label-input100">Fecha de Termino</span>
-						<input class="input100" type="datetime-local" name="finish">
+						<input class="input100" type="date" name="finish">
 						<span class="focus-input100"></span>
 					</div>
 
-          <div class="field_wrapper">
-
-          </div>
-
-          <div class="container-login100-form-btn" style="padding-bottom:30px;">
-						<a href="javascript:void(0);" class="add_button login100-form-btn" title="Agregar Horario">Agregar Horario</a>
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Tipo de Evento es requerido">
+						<span class="label-input100">Horario</span>
+						<select class="input100" name="dates">
+              {{#each schedules}}
+                <option value="{{name}}">{{name}}</option>
+              {{/each}}
+            </select>
+						<span class="focus-input100"></span>
 					</div>
 
           <div class="wrap-input100 validate-input m-b-26" data-validate="Municipio es requerido">

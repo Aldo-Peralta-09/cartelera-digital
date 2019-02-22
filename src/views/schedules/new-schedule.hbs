@@ -1,0 +1,188 @@
+<section class="wow fadeIn">
+  <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(/img/culture.jpg);">
+					<span class="login100-form-title-1">
+						Registrar Horario
+					</span>
+				</div>
+
+				<form class="login100-form validate-form" action="/schedule/new-schedule" method="POST">
+
+          			<div class="wrap-input100 validate-input m-b-26" data-validate="Correo electrónico es requerido">
+						<span class="label-input100">Nombre del Evento</span>
+						<input class="input100" type="text" name="name" value="{{name}}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Fecha de Inicio es requerido">
+						<span class="label-input100">Fecha de Inicio</span>
+						<input class="input100" type="date" name="date">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="w-100">
+						<h3>Lunes</h3>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 1</span>
+						<input class="input100" type="time" name="monday1">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 2</span>
+						<input class="input100" type="time" name="monday2">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 3</span>
+						<input class="input100" type="time" name="monday3">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="w-100">
+						<h3>Martes</h3>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 1</span>
+						<input class="input100" type="time" name="tuesday1">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 2</span>
+						<input class="input100" type="time" name="tuesday2">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 3</span>
+						<input class="input100" type="time" name="tuesday3">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="w-100">
+						<h3>Miercoles</h3>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 1</span>
+						<input class="input100" type="time" name="wednesday1">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 2</span>
+						<input class="input100" type="time" name="wednesday2">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 3</span>
+						<input class="input100" type="time" name="wednesday3">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="w-100">
+						<h3>Jueves</h3>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 1</span>
+						<input class="input100" type="time" name="thursday1">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 2</span>
+						<input class="input100" type="time" name="thursday2">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 3</span>
+						<input class="input100" type="time" name="thursday3">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="w-100">
+						<h3>Viernes</h3>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 1</span>
+						<input class="input100" type="time" name="friday1">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 2</span>
+						<input class="input100" type="time" name="friday2">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 3</span>
+						<input class="input100" type="time" name="friday3">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="w-100">
+						<h3>Sabado</h3>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 1</span>
+						<input class="input100" type="time" name="saturday1">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 2</span>
+						<input class="input100" type="time" name="saturday2">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 3</span>
+						<input class="input100" type="time" name="saturday3">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="w-100">
+						<h3>Domingo</h3>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 1</span>
+						<input class="input100" type="time" name="sunday1">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 2</span>
+						<input class="input100" type="time" name="sunday2">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Horario 3</span>
+						<input class="input100" type="time" name="sunday3">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<input class="login100-form-btn" type="submit">
+
+						</input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

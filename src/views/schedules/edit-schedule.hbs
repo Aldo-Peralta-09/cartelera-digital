@@ -1,0 +1,80 @@
+<section class="wow fadeIn">
+  <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(/img/culture.jpg);">
+					<span class="login100-form-title-1">
+						Editar Horario
+					</span>
+				</div>
+
+        <img src="/img/cartelera.png" class="rounded-circle mx-auto d-block m-4 logo" alt="Logo Cartelera">
+
+				<form class="login100-form validate-form" action="/users/edit-user/{{schedule._id}}?_method=PUT" method="POST">
+
+          <input type="hidden" name="_method" value="PUT">
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Correo electrónico es requerido">
+						<span class="label-input100">Nombre del Evento</span>
+						<input class="input100" type="text" name="name" value="{{schedule.name}}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Fecha de Inicio es requerido">
+						<span class="label-input100">Fecha de Inicio</span>
+						<input class="input100" type="date" name="date" value="{{schedule.date}}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Lunes</span>
+						<input class="input100" type="text" name="monday" value="{{schedule.monday}}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Martes</span>
+						<input class="input100" type="time" name="tuesday" value="{{schedule.tuesday}}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Miercoles</span>
+						<input class="input100" type="text" name="wednesday" value="{{schedule.wednesday}}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Jueves</span>
+						<input class="input100" type="text" name="thursday" value="{{schedule.thursday}}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Viernes</span>
+						<input class="input100" type="text" name="friday" value="{{schedule.friday}}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Sabado</span>
+						<input class="input100" type="text" name="saturday" value="{{schedule.saturday}}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Domingo</span>
+						<input class="input100" type="text" name="sunday" value="{{schedule.sunday}}">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<input class="login100-form-btn" type="submit">
+
+						</input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

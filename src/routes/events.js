@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Event = require('../models/Event');
+const Schedule = require('../models/Schedule');
 const {isAuthenticated} = require('../helpers/auth');
 const multer = require('multer');
 const path = require('path');
@@ -27,12 +28,12 @@ const upload = multer({
   }
 }).fields([{name: 'banner', maxCount: 1},{name: 'image', maxCount: 1}]);
 
-router.get('/events/add', isAuthenticated, (req,res) =>{
-  res.render('events/new-event');
+router.get('/events/add', isAuthenticated, async (req,res) =>{
+  const schedules = await Schedule.find({user: req.user.id}).sort({date:'desc'});
+  res.render('events/new-event',{schedules});
 });
 
 router.post('/events/new-event', isAuthenticated, upload, async (req,res) =>{
-  //const {title,description,discipline,category,type,hierarchy,event,start,finish,dates,municipality,place,organizer,speaker,url,entry,price,discount,public,especificPublic,gender,banner,image} = req.body;
   const errors = [];
   if (errors.length > 0) {
     res.render('events/new-event',{
